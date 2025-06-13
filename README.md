@@ -1,4 +1,4 @@
-# BidQuity
+# ArsipQue
 Project UAP Pemrosesan Data Terdistribusi
 Kelompok 15
 1. Okta Safitri_2317051013
