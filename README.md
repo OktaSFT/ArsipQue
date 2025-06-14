@@ -142,6 +142,8 @@ Stored function memungkinkan perhitungan dan agregasi data yang sering dilakukan
 Proses otomatis menyalin data database ke lokasi terpisah secara berkala untuk tujuan pemulihan jika terjadi kehilangan data.
 - Proyek ini menyertakan skrip shell bernama **backup_script.sh**. Skrip ini dirancang untuk dijalankan secara otomatis untuk membuat backup database **arsipku** menggunakan utilitas **mysqldump**.
 - Fitur tambahan dari skrip ini adalah kemampuan untuk mengkompres file backup dengan **gzip** dan secara otomatis menghapus file backup yang berusia lebih dari 30 hari untuk menghemat ruang penyimpanan.
+  ![image](https://github.com/user-attachments/assets/f8338699-f948-423b-806c-59e3f9cfec01)
+  ![image](https://github.com/user-attachments/assets/103af1f6-75e7-4542-b751-03e20600f21e)
 memastikan bahwa meskipun terjadi kegagalan sistem, kerusakan hardware, atau insiden tak terduga lainnya, data arsip dapat dipulihkan ke kondisi sebelumnya, menjaga ketersediaan dan keandalan sistem.
 
 # 🧩 Relevansi Proyek dengan Pemrosesan Data Terdistribusi
