@@ -29,7 +29,7 @@ Proyek ini merupakan sistem pengarsipan dokumen sederhana yang dikembangkan meng
 
 # 📌 Detail Konsep
 # ⚠ Disclaimer
-Peran stored procedure, trigger, transaction, dan stored function dalam proyek ini dirancang khusus untuk kebutuhan sistem pdtbank. Penerapannya bisa berbeda pada sistem lain, tergantung arsitektur dan kebutuhan masing-masing sistem.
+Peran stored procedure, trigger, transaction, dan stored function dalam proyek ini dirancang khusus untuk kebutuhan sistem ArsipQue. Penerapannya bisa berbeda pada sistem lain, tergantung arsitektur dan kebutuhan masing-masing sistem.
 
 # 🧠 Stored Procedure
 Stored procedure adalah potongan kode SQL yang disimpan dalam database dan dapat dieksekusi beki-kali. Stored procedure membantu meningkatkan performa, keamanan, dan reusabilitas kode.
