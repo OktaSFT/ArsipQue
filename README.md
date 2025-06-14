@@ -34,6 +34,8 @@ Peran stored procedure, trigger, transaction, dan stored function dalam proyek i
 # 🧠 Stored Procedure
 Stored procedure adalah potongan kode SQL yang disimpan dalam database dan dapat dieksekusi beki-kali. Stored procedure membantu meningkatkan performa, keamanan, dan reusabilitas kode.
 - proyek ArsipQue menggunakan stored procedure bernama **get_dokumen_filter**. prosedur ini dirancang untuk mengambil daftar dokumen berdasarkan beberapa parameter filter seperti ID kategori, rentang tanggal upload, dan kata kunci pencarian pada nama atau deskripsi dokumen.
+  ![image](https://github.com/user-attachments/assets/01eb44ab-2cb7-4293-b519-2b0d342ce9c0)
+
   ![image](https://github.com/user-attachments/assets/91da6c4c-5286-4254-a6b1-7b9ec26f2b3b)
  
 - **daftar_dokumen.php** memanggil prosedur iniuntuk menampilkan dokumen yang difilter kepada pengguna.
@@ -97,6 +99,8 @@ Transaction sangat penting untuk menjaga integritas data dalam operasi yang meli
 # 📺 Stored Function
 Stored Function dirancang untuk mengembalikan nilai tunggal dan dapat dipanggil dalam ekspresi SQL seperti **SELECT**.
 - Proyek ini mendefinisikan sebuah stored function bernama **hitung_dokumen_per_kategori**. Fungsi ini menerima **kategori_id_param** sebagai input dan mengembalikan jumlah total dokumen yang terdaftar di bawah kategori tersebut. Fungsi ini digunakan di **dashboard.php** untuk menampilkan statistik distribusi dokumen per kategori.
+  ![image](https://github.com/user-attachments/assets/6ec4809c-2fa3-4be6-9665-a71a2a009b12)
+
   ```try {
     // Total dokumen
     $stmt = $pdo->query("SELECT COUNT(*) as total FROM dokumen");
@@ -142,6 +146,6 @@ memastikan bahwa meskipun terjadi kegagalan sistem, kerusakan hardware, atau ins
 
 # 🧩 Relevansi Proyek dengan Pemrosesan Data Terdistribusi
 1. Konsistensi data : pengguna transaction dan trigger adalah inti dari menjaga konsistensi data. Dalam sistem terdistribusi, tantangan untuk mencapai konsistensi di berbagai node jauh lebih besar, tetapi prinsip dasar dari operasi atomik dan logging yang andal tetap krusial.
-2. Modularitas Logika : Stored procedure dan function menunjukkan bagaimana logika bisnis dapat dimodularisasi. Dalam arsitektur terdistribusi (misalnya microservices), logika ini sering didistribusikan ke layanan-layanan terpisah, tetapi prinsip pemisahan tanggung jawab tetap ada.
+2. Modularitas Logika : Stored procedure dan function menunjukkan bagaimana logika bisnis dapat dimodularisasi. Dalam arsitektur terdistribusi, logika ini sering didistribusikan ke layanan-layanan terpisah, tetapi prinsip pemisahan tanggung jawab tetap ada.
 3. Ketahanan : Mekanisme backup otomatis adalah langkah pertama dalam strategi ketahanan data. Sistem terdistribusi memperluas ini dengan replikasi, sharding, dan distribusi geografis untuk memastikan ketersediaan data yang tinggi.
 4. Auditabilitas: Sistem log melalui trigger memberikan jejak audit. Dalam sistem terdistribusi, logging terpusat dari berbagai komponen sangat penting untuk pemantauan, debugging, dan kepatuhan.
